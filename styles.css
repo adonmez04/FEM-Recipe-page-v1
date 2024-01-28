@@ -87,7 +87,7 @@
   --stack-child: 0.5rem;
 }
 
-.section-preparation-time>h3 {
+.section-preparation-time>h2 {
   color: var(--dark-raspberry, #7A284E);
   font-size: 1.25rem;
   font-weight: 600;
