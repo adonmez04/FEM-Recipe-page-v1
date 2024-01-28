@@ -1,0 +1,14 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* The theme of the page */
+body {
+  /* font-style font-weight font-size/line-height font-family */
+  font: normal 400 1rem/1.5 "Outfit", "Arial", sans-serif;
+
+  background: var(--eggshell, #F3E5D7);
+}

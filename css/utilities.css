@@ -1,0 +1,7 @@
+.stack-parent>*+* {
+  margin-block-start: var(--stack-parent);
+}
+
+.stack-child>*+* {
+  margin-block-start: var(--stack-child);
+}

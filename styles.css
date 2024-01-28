@@ -1,0 +1,189 @@
+/* article-recipe */
+.article-recipe {
+  --stack-parent: 2.5rem;
+  border-radius: 1.5rem;
+  background: var(--white, #FFF);
+  overflow: hidden;
+}
+
+/* image-area */
+
+.image-area img {
+  border-radius: 0.75rem;
+  object-fit: cover;
+  aspect-ratio: 656 / 300;
+}
+
+/* content-area */
+.content-area {
+  --stack-child: 2rem;
+}
+
+/* section-title */
+.section-title {
+  --stack-parent: 1.5rem;
+}
+
+.section-title>h1 {
+  color: var(--dark-charcoal, #312E2C);
+  font-family: "Young Serif", "Arial", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: inherit;
+  /* The font-weight comes from body, 
+  but it doesn't affect the element, 
+  so I added the font-weight property again, 
+  and set the inherit keyword value 
+  to get the same font-weight from the body.
+  */
+}
+
+.section-title>p {
+  color: var(--wenge-brown, #5F564D);
+}
+
+/* section-preparation-time */
+.section-preparation-time {
+  --stack-parent: 1rem;
+  border-radius: 0.75rem;
+  background: var(--snow, #FFF7FB);
+  padding: 1.75rem;
+}
+
+.section-preparation-time ul {
+  --stack-child: 0.5rem;
+}
+
+.section-preparation-time>h3 {
+  color: var(--dark-raspberry, #7A284E);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.section-preparation-time li {
+  color: var(--wenge-brown, #5F564D);
+}
+
+/* section-ingredients */
+.section-ingredients {
+  --stack-parent: 1.5rem;
+}
+
+.section-ingredients>h2 {
+  color: var(--brandy-red, #854632);
+  font-family: "Young Serif", "Arial", sans-serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: inherit;
+}
+
+.section-ingredients ul {
+  --stack-child: 0.5rem;
+}
+
+.section-ingredients li {
+  color: var(--wenge-brown, #5F564D);
+}
+
+.section-ingredients::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--white-coffee, #E3DDD7);
+  margin-block: 2rem;
+}
+
+/* section-instructions */
+.section-instructions {
+  --stack-parent: 1.5rem;
+}
+
+.section-instructions>h2 {
+  color: var(--brandy-red, #854632);
+  font-family: "Young Serif", "Arial", sans-serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: inherit;
+}
+
+.section-instructions ol {
+  --stack-child: 0.5rem;
+}
+
+.section-instructions li {
+  color: var(--wenge-brown, #5F564D);
+}
+
+/* To style the marker */
+.section-instructions ol {
+  padding-inline-start: 1.5rem;
+}
+
+.section-instructions ol li {
+  padding-inline-start: 1rem;
+}
+
+.section-instructions ol li::marker {
+  color: var(--brandy-red, #854632);
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: 700;
+  line-height: inherit;
+}
+
+/* To make the horizontal line */
+.section-instructions::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--white-coffee, #E3DDD7);
+  margin-block: 2rem;
+}
+
+/* section-nutrition */
+.section-nutrition>h3 {
+  color: var(--brandy-red, #854632);
+  font-family: "Young Serif", "Arial", sans-serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: inherit;
+}
+
+.section-nutrition>p {
+  color: var(--wenge-brown, #5F564D);
+  margin-block: 1.5rem;
+}
+
+.section-nutrition li {
+  padding-inline: 2rem;
+}
+
+.section-nutrition ul {
+  list-style: none;
+  padding: unset;
+}
+
+.section-nutrition li>span:first-child {
+  display: inline-block;
+  color: var(--wenge-brown, #5F564D);
+  inline-size: 50%;
+  padding-inline-end: 0.5rem;
+}
+
+.section-nutrition li>span:last-child {
+  display: inline-block;
+  color: var(--brandy-red, #854632);
+  font-weight: 700;
+  inline-size: 50%;
+  padding-inline-start: 0.5rem;
+}
+
+.section-nutrition ul li:not(:last-child)::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--white-coffee, #E3DDD7);
+  margin-block: 0.75rem;
+}
