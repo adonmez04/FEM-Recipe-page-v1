@@ -11,5 +11,9 @@
 /* To the vertical line */
 .vertical-line {
   border-block-end: 1px solid var(--white-coffee, #E3DDD7);
-  padding-block-end: 2rem;
+  padding-block-end: calc(2rem - 1px);
+  /* I have the same problem here as the list elements in the section-nutrition area. 
+  The border height value adds to the elements height, 
+  it breaks the correct height value for the element as the design file. 
+  So, I used the calc function to get the correct height value for the element. */
 }

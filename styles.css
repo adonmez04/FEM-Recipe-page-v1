@@ -1,24 +1,25 @@
-/* article-recipe */
+/*** article-recipe ***/
 .article-recipe {
   --stack-parent: 2.5rem;
   border-radius: 1.5rem;
   background: var(--white, #FFF);
   overflow: hidden;
+  padding: 2.5rem;
 }
 
-/* image-area */
+/*** image-area ***/
 .image-area img {
   border-radius: 0.75rem;
   object-fit: cover;
   aspect-ratio: 656 / 300;
 }
 
-/* content-area */
+/*** content-area ***/
 .content-area {
   --stack-child: 2rem;
 }
 
-/* section-title */
+/*** section-title ***/
 .section-title {
   --stack-parent: 1.5rem;
 }
@@ -41,7 +42,7 @@
   color: var(--wenge-brown, #5F564D);
 }
 
-/* section-preparation-time */
+/*** section-preparation-time ***/
 .section-preparation-time {
   --stack-parent: 1rem;
   border-radius: 0.75rem;
@@ -64,7 +65,22 @@
   color: var(--wenge-brown, #5F564D);
 }
 
-/* section-ingredients */
+/* To style the marker */
+.section-preparation-time ul {
+  padding-inline-start: 1.5rem;
+}
+
+.section-preparation-time li {
+  padding-inline-start: 1rem;
+}
+
+.section-preparation-time li::marker {
+  color: var(--dark-raspberry, #7A284E);
+  width: 4px;
+  height: 4px;
+}
+
+/*** section-ingredients ***/
 .section-ingredients {
   --stack-parent: 1.5rem;
 }
@@ -85,7 +101,22 @@
   color: var(--wenge-brown, #5F564D);
 }
 
-/* section-instructions */
+/* To style the marker */
+.section-ingredients ul {
+  padding-inline-start: 1.5rem;
+}
+
+.section-ingredients li {
+  padding-inline-start: 1rem;
+}
+
+.section-ingredients li::marker {
+  color: var(--brandy-red, #854632);
+  width: 4px;
+  height: 4px;
+}
+
+/*** section-instructions ***/
 .section-instructions {
   --stack-parent: 1.5rem;
 }
@@ -124,7 +155,7 @@
   line-height: inherit;
 }
 
-/* section-nutrition */
+/*** section-nutrition ***/
 .section-nutrition>h3 {
   color: var(--brandy-red, #854632);
   font-family: "Young Serif", "Arial", sans-serif;
@@ -138,13 +169,13 @@
   margin-block: 1.5rem;
 }
 
-.section-nutrition li {
-  padding-inline: 2rem;
-}
-
 .section-nutrition ul {
   list-style: none;
   padding: unset;
+}
+
+.section-nutrition li {
+  padding-inline: 2rem;
 }
 
 .section-nutrition li>span:first-child {
@@ -163,10 +194,16 @@
 }
 
 /* To make the vertical line */
-.section-nutrition ul li:not(:last-child)::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: var(--white-coffee, #E3DDD7);
-  margin-block: 0.75rem;
+.section-nutrition ul li:not(:last-child) {
+  border-block-end: 1px solid var(--white-coffee, #E3DDD7);
+  margin-block-end: 0.75rem;
+  padding-block-end: calc(0.75rem - 1px);
+  /* I used the calc function here, 
+  because the list item area adds the border height to its height value. 
+  So this breaks the correct height value. 
+  With this calc function, 
+  I subtracted 1px of the border height value from the list item area. 
+  So the list items now have the same height value as the design file.
+  I tried to solve this problem in more clear ways, but they didn't work.
+  */
 }
