@@ -65,7 +65,7 @@
 
   @media (width <=375px) {
     font-size: 1rem;
-    text-align: justify;
+    /* text-align: justify; */
   }
 }
 
