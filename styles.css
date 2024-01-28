@@ -1,10 +1,17 @@
 /*** article-recipe ***/
 .article-recipe {
+  /* For the margin value */
   --stack-parent: 2.5rem;
   border-radius: 1.5rem;
   background: var(--white, #FFF);
   overflow: hidden;
   padding: 2.5rem;
+
+  @media (width <=375px) {
+    --stack-parent: 0;
+    border-radius: 0;
+    padding: 0;
+  }
 }
 
 /*** image-area ***/
@@ -12,15 +19,26 @@
   border-radius: 0.75rem;
   object-fit: cover;
   aspect-ratio: 656 / 300;
+
+  @media (width <=375px) {
+    border-radius: 0;
+    aspect-ratio: 375 / 171;
+  }
 }
 
 /*** content-area ***/
 .content-area {
   --stack-child: 2rem;
+
+  @media (width <=375px) {
+    padding-block: 2.5rem;
+    padding-inline: 2rem;
+  }
 }
 
 /*** section-title ***/
 .section-title {
+  /* For the margin value */
   --stack-parent: 1.5rem;
 }
 
@@ -36,21 +54,36 @@
   and set the inherit keyword value 
   to get the same font-weight from the body.
   */
+
+  @media (width <=375px) {
+    font-size: 2.25rem;
+  }
 }
 
 .section-title>p {
   color: var(--wenge-brown, #5F564D);
+
+  @media (width <=375px) {
+    font-size: 1rem;
+    text-align: justify;
+  }
 }
 
 /*** section-preparation-time ***/
 .section-preparation-time {
+  /* For the margin value */
   --stack-parent: 1rem;
   border-radius: 0.75rem;
   background: var(--snow, #FFF7FB);
   padding: 1.75rem;
+
+  @media (width <=375px) {
+    padding: 1.5rem;
+  }
 }
 
 .section-preparation-time ul {
+  /* For the margin value */
   --stack-child: 0.5rem;
 }
 
@@ -94,6 +127,7 @@
 }
 
 .section-ingredients ul {
+  /* For the margin value */
   --stack-child: 0.5rem;
 }
 
@@ -118,6 +152,7 @@
 
 /*** section-instructions ***/
 .section-instructions {
+  /* For the margin value */
   --stack-parent: 1.5rem;
 }
 
@@ -130,6 +165,7 @@
 }
 
 .section-instructions ol {
+  /* For the margin value */
   --stack-child: 0.5rem;
 }
 

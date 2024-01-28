@@ -1,5 +1,13 @@
 .article-recipe {
-  max-inline-size: 736px;
+  /* 736px */
+  max-inline-size: 46rem;
   margin-block: 7.6875rem;
   margin-inline: auto;
+
+  @media (width <=375px) {
+    /* 375px */
+    max-inline-size: 23.4375rem;
+    margin-block: 0;
+    margin-inline: 0;
+  }
 }
