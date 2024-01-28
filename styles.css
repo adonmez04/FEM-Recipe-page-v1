@@ -212,6 +212,10 @@
 
 .section-nutrition li {
   padding-inline: 2rem;
+
+  @media (width <=250px) {
+    padding-inline: 0;
+  }
 }
 
 .section-nutrition li>span:first-child {
@@ -219,6 +223,12 @@
   color: var(--wenge-brown, #5F564D);
   inline-size: 50%;
   padding-inline-end: 0.5rem;
+
+  @media (width <=250px) {
+    display: block;
+    inline-size: 100%;
+    padding-inline-end: 0;
+  }
 }
 
 .section-nutrition li>span:last-child {
@@ -227,6 +237,12 @@
   font-weight: 700;
   inline-size: 50%;
   padding-inline-start: 0.5rem;
+
+  @media (width <=250px) {
+    display: block;
+    padding-inline-start: 0rem;
+    inline-size: 100%;
+  }
 }
 
 /* To make the vertical line */
