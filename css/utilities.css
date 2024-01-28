@@ -1,7 +1,15 @@
+/* To add the margin for the parent elements */
 .stack-parent>*+* {
   margin-block-start: var(--stack-parent);
 }
 
+/* To add the margin for the child elements */
 .stack-child>*+* {
   margin-block-start: var(--stack-child);
+}
+
+/* To the vertical line */
+.vertical-line {
+  border-block-end: 1px solid var(--white-coffee, #E3DDD7);
+  padding-block-end: 2rem;
 }

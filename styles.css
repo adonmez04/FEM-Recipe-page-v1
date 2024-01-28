@@ -7,7 +7,6 @@
 }
 
 /* image-area */
-
 .image-area img {
   border-radius: 0.75rem;
   object-fit: cover;
@@ -86,14 +85,6 @@
   color: var(--wenge-brown, #5F564D);
 }
 
-.section-ingredients::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: var(--white-coffee, #E3DDD7);
-  margin-block: 2rem;
-}
-
 /* section-instructions */
 .section-instructions {
   --stack-parent: 1.5rem;
@@ -131,15 +122,6 @@
   font-style: inherit;
   font-weight: 700;
   line-height: inherit;
-}
-
-/* To make the horizontal line */
-.section-instructions::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: var(--white-coffee, #E3DDD7);
-  margin-block: 2rem;
 }
 
 /* section-nutrition */
@@ -180,6 +162,7 @@
   padding-inline-start: 0.5rem;
 }
 
+/* To make the vertical line */
 .section-nutrition ul li:not(:last-child)::after {
   content: "";
   display: block;
