@@ -184,11 +184,15 @@
 
 .section-instructions ol li::marker {
   color: var(--brandy-red, #854632);
-  font-family: inherit;
+  font: normal 700 1rem/1.5 "Outfit", "Arial", sans-serif;
+  /* The ::marker pseudo-element selector only applies the shorthand font property to the style. 
+  I checked out the mdn page on marker and I thought it could accept the longhand versions of the font property, but it can't. */
+
+  /* font-family: inherit;
   font-size: inherit;
   font-style: inherit;
   font-weight: 700;
-  line-height: inherit;
+  line-height: inherit; */
 }
 
 /*** section-nutrition ***/
